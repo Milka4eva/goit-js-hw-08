@@ -23,7 +23,7 @@ form.addEventListener('submit', e => {
 const load = key => {
   try {
     const serialState = localStorage.getItem(key);
-    if (localstorage ===null) {
+    if (serialState === null) {
       return
     }
     else {
