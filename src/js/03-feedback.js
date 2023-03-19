@@ -23,7 +23,11 @@ form.addEventListener('submit', e => {
 const load = key => {
   try {
     const serialState = localStorage.getItem(key);
-    return serialState === null ? undefined : JSON.parse(serialState);
+    if (localstorage ===null) {
+      return
+    }
+    else {
+    return serialState === null ? undefined : JSON.parse(serialState);}
   } catch (error) {
     console.error('Get state error: ', error.message);
   }
